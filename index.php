@@ -31,50 +31,15 @@ class Ipsum_button {
 	    return $button;
 	}
 
-	public function ipsum_button_style(){ ?>
-
-		<style>
-
-			/* 3.8 Button Style */
-			a.mce_lorem{
-				width:40px !important;
-				vertical-align: top !important;
-				text-align: center !important;
-			}
-
-			span.mce_lorem:before{
-				content: "ipsum";
-				font-size: 13px;
-				font-style: italic;
-				font-family: Georgia, "Times New Roman", "Bitstream Charter", Times,serif;
-				vertical-align: top !important;
-				line-height: 20px !important;
-				display: block !important;
-				width:40px !important;
-			}
-
-			/* 3.9+ Button Style */
-			i.mce-i-lorem{
-				line-height: normal !important;
-				width:40px !important;
-			}
-
-			i.mce-i-lorem:before{
-				content: "ipsum";
-				font-size: 13px;
-				font-style: italic;
-				font-family: Georgia, "Times New Roman", "Bitstream Charter", Times,serif;
-			}
-
-		</style>
-
-	<?php }
-
 	public function __construct(){
+
 		//Init
 		add_action( 'init', array(&$this, 'add_filters' ) );
+
 		//Button Style
-		add_action( 'admin_head', array(&$this, 'ipsum_button_style') );
+		wp_register_style( 'ipsum-button', IPSUM_URL . '/style.css' );
+		wp_enqueue_style( 'ipsum-button' );
+
 	}
 
 }

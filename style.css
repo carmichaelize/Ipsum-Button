@@ -1,0 +1,30 @@
+/* 3.8 Button Style */
+a.mce_lorem{
+	width:40px !important;
+	vertical-align: top !important;
+	text-align: center !important;
+}
+
+span.mce_lorem:before{
+	content: "ipsum";
+	font-size: 13px;
+	font-style: italic;
+	font-family: Georgia, "Times New Roman", "Bitstream Charter", Times,serif;
+	vertical-align: top !important;
+	line-height: 20px !important;
+	display: block !important;
+	width:40px !important;
+}
+
+/* 3.9+ Button Style */
+i.mce-i-lorem{
+	line-height: normal !important;
+	/*width:40px !important;*/
+}
+
+i.mce-i-lorem:before{
+	content: "Lor";
+	font-size: 12px;
+	font-style: italic;
+	font-family: Georgia, "Times New Roman", "Bitstream Charter", Times,serif;
+}
